@@ -1,0 +1,985 @@
+@import "colores.scss";
+
+* {margin: 0; padding: 0;}
+
+body {text-align: center;}
+
+main {
+    background-image: linear-gradient(to top, $color5, $color3, $color2);
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: darken($color: $escalaGrises, $amount: 30%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    font-size: 25px;
+}
+
+p, h5 {
+    color: darken($color: $escalaGrises, $amount: 60%);
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+}
+
+ol {
+    li {
+        color: $colorJ;
+        padding: 5px;
+        list-style-type:decimal;
+        font-family:'Montserrat', sans-serif;
+    }
+}
+
+ul{
+    li {
+        color: $colorF;
+        padding: 5px;
+        list-style-type: none;
+        font-family:'Montserrat', sans-serif;
+    }
+}
+
+/* GENERALES /////////////////////////////////////////////////////////////////////////////////// */
+
+.header {
+    padding: 10px;
+    background-color: $headerYFooterOscuro;
+    &__logo{
+        color: darken($color: $escalaGrises, $amount: 100%);
+        padding: 0% 42%;
+        margin-bottom: 0px;
+    }
+    &__h1{
+        color:$headerYFooterOscuroClaro;
+        font-family: 'Gruppo', cursive;
+        margin: 0px;
+        padding: 0px;
+        font-size: 50px;
+    }
+    &__p{
+        @extend .header__h1;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-size: 15px;
+        padding-bottom: 28px;
+    }
+    &__lista{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__item{
+        transition: all 0.75s;
+        a{
+            text-decoration: none;
+            padding: 20px 10px;
+            color:$color2;
+            text-transform: uppercase;
+        }
+    } 
+    &__item:hover {
+        background-color: $color2;
+        color: darken($color: $escalaGrises, $amount: 100%);
+        a{color:$hoverLink;}
+    }
+}
+
+.footer {
+    background-color: $headerYFooterOscuro;
+    padding-top:20px;
+    &__p{
+        font-size: 16px;
+        color:$headerYFooterOscuroClaro;
+        padding-bottom: 20px;
+    }
+    &__rrss{
+        width: 60px;
+        height: auto;
+        color: darken($color: $headerYFooterOscuroClaro, $amount: 10%);
+    }
+}
+
+/* HOME //////////////////////////////////////////////////////////////////////////////////////// */  
+.home1 {
+    padding: 20px 0px;
+    .carousel-item {
+        h2 {padding-top: 20px;} 
+    }
+}  
+.home2 {
+    color: $colorD;
+    padding-bottom: 25px;
+    &__texto {
+        padding: 50px 0px;
+        align-self: center;
+        h2 {color: $colorD;}
+        p {color: $colorD;}
+    }
+    &__img {
+        padding: 50px 0px;
+        img {
+            width: 90%;
+            border: 2px solid brown;
+        }
+    }
+}
+.home3{
+    padding-bottom: 100px;
+    &__h2{
+        padding-bottom: 100px;
+    }
+    &__Estrellas{
+        padding-bottom: 20px;
+    }
+    &__item{
+        border: 1px solid black;
+        padding: 20px;
+        background-color: $color3;
+        h3{
+           text-transform: uppercase;
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+            font-style: italic;
+        }
+    }
+}
+/* OPTIPLUS //////////////////////////////////////////////////////////////////////////////////// */
+
+.oplus1{
+    &__banner{
+        background-image: url(../IMG/banner_optiplus.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 500px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            font-family: 'Staatliches', cursive;
+            font-size: 80px;
+            color: $color2; 
+        }
+        p{
+            font-family: gruppo, Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            color: $color2;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }  
+    }
+    &__descripcion{
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            font-weight: 800;
+            padding-bottom: 20px;
+            color: $colorD;
+        }
+        h2{
+            font-family: 'Staatliches', cursive;
+        }
+    }
+}
+.oplus2 {
+    color: $colorD;
+    padding-bottom: 25px;
+    &__texto {
+        padding: 25px 0px;
+        align-self: center;
+        h2 {
+            color: $colorD;
+            font-family: gruppo, Arial, Helvetica, sans-serif;
+            font-weight: 800;
+        }
+    }
+    &__img {
+        padding: 25px 0px; 
+        img {
+            width: 100%;
+            border: 2px solid brown;
+        }
+    }
+}
+@mixin tiers ($colorFondo, $colorFuente){
+    border: 1px solid darken($color: $escalaGrises, $amount: 100%);
+    text-align:center;
+    background-color: $colorFondo;
+    padding: 10%;
+    h3{
+        font-family: gruppo, Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 40px;
+        color: $colorFuente;
+    }
+    p{
+        font-size: 15px;
+        font-style: italic;
+    }
+    ul{
+        padding: 0px;
+        margin: 0px;
+    }
+    li{
+        color: $colorFuente;
+        text-transform: uppercase;
+    }
+}
+.oplus3{
+    padding-bottom: 50px;
+    &__h2{
+        padding: 50px 0px; 
+        font-family: 'Staatliches', cursive;
+    }
+    &__tierWelcome{
+        @include tiers ($welcome, lighten($color: $escalaGrises, $amount: 60%));
+    }
+    &__tierSilver{
+        @include tiers ($silver,  lighten($color: $escalaGrises, $amount: 60%));
+    }
+    &__tierGold{
+        @include tiers ($gold,     darken($color: $escalaGrises, $amount: 60%));
+    }
+}
+.oplus4{
+    &__h2{
+        padding: 25px 0px; 
+        font-family: 'Staatliches', cursive;
+    }
+    &__p{
+        font-style: italic;
+        padding-bottom: 0px;
+    }
+    &__boton{
+        transition: all 0.75s;
+        list-style-type: none;
+        padding: 50px 0px;
+        font-size: 50px;
+        a{
+            text-decoration: none;
+            padding: 20px 10px;
+            color:$color2;
+            text-transform: uppercase;
+            font-family: 'Staatliches', cursive;
+        }
+    } 
+    &__boton:hover {
+        background-color: $color2;
+        color: darken($color: $escalaGrises, $amount: 100%);
+        a{
+            color:$hoverLink;
+        }
+    }
+}
+
+/* SUCURSALES ////////////////////////////////////////////////////////////////////////////////// */
+
+.sucursales {
+    padding: 0px;
+    &__titulo{
+        padding: 50px 0px;
+        background-color: $color5;
+        h2{
+            text-transform: uppercase;
+            margin-bottom: 20px; 
+        }
+    }
+    &__row{
+        display:grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr ;
+        grid-template-rows: 100%;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+    }
+    &__item{
+        padding: 50px 0px;
+        h3{
+            font-size: 25px;
+            text-transform: uppercase;
+            font-family: gruppo, Arial, Helvetica, sans-serif;
+        }
+        h4{
+            font-size: 20px;
+            padding-bottom: 2px;
+        }
+        p{
+            font-size: 15px;
+            font-style: italic;
+            padding-bottom: 15px;
+        }
+        iframe{
+            width: 100%;
+        }
+    }
+}
+/* TURNOS ////////////////////////////////////////////////////////////////////////////////////// */
+
+.turnos {
+    &__h2{
+        font-weight: 800;
+    }
+    &__h3{
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    &__img{
+        width: 50%;
+    }
+    &__botonReservar{
+        margin-bottom: 100px;
+    }
+}
+
+/* ARMAZONES /////////////////////////////////////////////////////////////////////////////////// */
+
+.armazones{
+    padding-top: 50px;
+    &__tabla{
+        margin:50%;
+        background-color: lighten($color: $escalaGrises, $amount: 60%);
+        margin: 20px 10px;
+        display: grid; 
+        grid-template-columns: 1fr  2fr   2fr ;
+        grid-template-rows:    25px 150px 150px 150px ;
+    }
+    &__tituloH{
+        align-self: center;
+    }
+    &__tituloV{
+        align-self: center;
+    }
+    &__lista{
+        list-style-image: url(../IMG/li_glasses.png);
+        align-self: center;
+    }
+    &__videoDeYoutube{
+        border: dashed 1px $colorD;
+    }
+}
+
+/* CONTACTO //////////////////////////////////////////////////////////////////////////////////// */
+
+/* MEDIA QUERIE - Extra Small Devices ////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 600px){
+
+    /* GENERALES /////////////////////////////////////////////////////////////////////////// */
+
+    img {
+        width: 95%;
+    }
+    .header {
+        &__h1{
+            font-size: 40px;
+        }
+        &__p{
+            font-size: 15px;
+        }
+        &__menu{
+            width: 100%;
+        }
+        &__lista{
+            display: flex;
+            flex-wrap: wrap;
+            padding:0px;
+        }
+        &__item{
+            width: 100%;
+            padding: 10px 0px;
+        }
+    }
+    .footer{
+        &__p{
+            font-size: 12px;
+        }
+    }
+
+    /* HOME //////////////////////////////////////////////////////////////////////////////// */
+
+    .home1 {
+        padding-top: 0px;
+        .carousel-item {
+            h2{
+                padding-top: 20px;
+            }   
+            p{   
+                color: darken($color: $escalaGrises, $amount: 100%);
+                padding:10px;
+                font-size: 15px;
+            } 
+        }
+    }   
+    .home2 {
+        padding-top: 0px;
+        &__texto {
+            background-color: lighten($color: $escalaGrises, $amount: 0%) ;
+            padding: 10%;
+            h2{
+                color: darken($color: $escalaGrises, $amount: 100%);
+            }
+            p {
+                color: darken($color: $escalaGrises, $amount: 100%);
+                font-size: 15px;
+            }
+        }
+        &__img {
+            margin: 0px;
+            background-color: lighten($color: $escalaGrises, $amount: 30%);
+            padding-bottom: 0px;
+            padding-top: 0px;
+            border: 0px solid black;
+            h2{
+                padding: 10% 10% 0% 10%;
+                color: darken($color: $escalaGrises, $amount: 100%);
+            }
+            p{
+                padding: 10% 10% 0% 10%;
+                color: darken($color: $escalaGrises, $amount: 100%);
+                font-size: 15px;
+            }
+            img{
+                border: none;
+            }
+        }   
+    }
+    .home3{
+        &__h2{
+            padding: 75px 0px;
+        }
+    }
+
+    /* OPTIPLUS //////////////////////////////////////////////////////////////////////////// */
+
+    main{
+        padding: 0px;
+    }
+    .oplus1{
+        &__banner{
+            background-size: cover;
+        }
+        &__descripcion{
+            height: auto;
+            p{
+                padding: 10%;
+            }
+            h2{
+                padding: 5%;
+            }
+        }
+    }
+    .oplus2 {
+        &__h2{
+            padding: 25px 0px;
+        }
+        &__texto {
+            padding: 25px 10px;
+            order: 1;
+            h2{
+                color: $colorD;
+                font-size: 30px;
+                padding: 0% 10%;
+            }
+        }
+        &__img{
+            order: 2;
+            padding-top: 0px;
+            padding: 5px 10px;
+        }
+    }
+    .oplus3{
+        padding-bottom: 50px;
+        
+        &__h2{
+            padding-top: 50px 0px 25px 0px;
+        }
+    }
+    .oplus4{
+        &__h2{
+            padding: 0px;
+        }
+        &__p{
+            padding-bottom: 0px;
+        }
+    }
+
+    /* SUCURSALES ////////////////////////////////////////////////////////////////////////// */
+
+    .sucursales {
+        padding-bottom: 50px;
+        &__item{
+            padding: 0px;
+            h3{
+                padding-top: 50px;
+            }
+            p{
+                padding-bottom: 25px;
+            }
+            iframe{
+                display: none;
+            }
+        }
+    }
+    /* TURNOS ////////////////////////////////////////////////////////////////////////// */
+
+    .turnos {
+        &__img{
+            width: 100%;
+        }
+        &__botonReservar{
+            width: 100%;
+            height: 50px;
+        }
+        &__dropdownTurno {
+            width: 100%;
+            height: 50px;
+        }
+    }
+
+    /* ARMAZONES ////////////////////////////////////////////////////////////////////////// */
+
+    .armazones{
+        &__tabla{
+            background-color: lighten($color: $escalaGrises, $amount: 60%);
+            padding: 10px ;
+            margin: 20px 10px;
+            display: grid; 
+            grid-template-columns: 1fr  2fr   2fr ;
+            grid-template-rows:    25px 200px 200px 200px ;
+            justify-content: space-evenly;
+        }
+        &__tituloH{
+            align-self: center;
+            font-size: 12px;
+        }
+        &__tituloV{
+            align-self: center;
+            font-size: 12px;
+        }
+        &__lista{
+            list-style-image: none;
+            font-size: 12px;
+            align-self: center;
+            padding-left: 0px;
+            font-weight: 800;
+        }
+        &__videoDeYoutube{
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+
+    /* CONTACTO ////////////////////////////////////////////////////////////////////////// */
+
+    .contacto {
+        background-image: url(../IMG/fondo_contacto.jpg);
+        background-size: cover;
+        padding: 20px;
+        line-height: 25px;
+        &__h2{
+            padding-bottom: 10px;
+        }
+        &__input{
+            width: 100%;
+            height: 35px;
+        }
+        &__textarea{
+            width: 100%;
+            height: 100px;
+        }
+        &__dropdownAsunto {
+            width: 100%;
+            height: 35px;
+        }
+        &__checkbox {
+            height: 20px;
+        }
+    }
+}
+
+/* MEDIA QUERIE - Tablets ////////////////////////////////////////////////////////////////////// */
+
+@media only screen and (min-width: 600px){
+
+    /* GENERALES /////////////////////////////////////////////////////////////////////////// */
+
+    img {
+        width: 75%;
+    }
+    .header {   
+        &__menu{
+            width: 100%;
+        }
+        &__lista{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100%;
+            padding: 0% 15%;
+        }
+        &__item{
+            width: 100%;
+            padding: 10px 0px;
+        }
+    }
+
+    /* HOME //////////////////////////////////////////////////////////////////////////////// */
+
+    .home1 {
+        background-color: lighten($color: $escalaGrises, $amount: 30%);
+        padding-top: 20px;
+        .carousel-item {
+            h2 {
+                padding-top: 20px;
+            } 
+        }
+    }
+    .home2 {  
+        padding-top: 25px;
+        &__texto {
+            transition:all 1s;
+            p{
+                font-size: 15px;
+            }
+            iframe{
+                width: 100%;
+                height: 300px;
+            }
+        }
+        &__img{
+            transition:all 1s;
+            p{
+                font-size: 12px;
+            }
+            iframe{
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+
+    /* OPTIPLUS //////////////////////////////////////////////////////////////////////////// */
+
+    .oplus1{
+        &__banner{
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 500px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+        }
+        &__descripcion{
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p{
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .oplus2 {
+        color: $colorD;
+        &__texto {
+            padding: 25px 0px;
+            font-size: 50%;
+        }
+        &__img {
+            padding: 25px 0px; 
+            img {
+                width: 100%;
+                border: 2px solid brown;
+            }
+        }
+    }
+    .oplus3{
+        padding-bottom: 25px;
+        &__h2{
+            padding: 25px 0px; 
+        }
+    }
+    .oplus4{
+        &__h2{
+            padding: 25px 0px;
+        }
+        &__p{
+            padding-bottom: 0px;
+        }
+        &__boton{
+            padding: 50px 0px;
+            font-size: 50px;
+            a{
+                padding: 20px 10px;
+            }
+        } 
+    }
+
+    /* SUCURSALES ////////////////////////////////////////////////////////////////////////// */
+    .sucursales{
+        &__item{
+            padding: 0px;
+            h3{
+                padding: 50px 0px 25px 0px;
+            }
+            p{
+                padding-bottom: 25px;
+            }
+            iframe{
+                display: none;
+                height: 0px;
+                padding: 0px 0px;
+            }
+        }
+    }
+    /* TURNOS ////////////////////////////////////////////////////////////////////////////// */
+
+    .turnos {
+        &__img{
+            width: 65%;
+        }
+        &__botonReservar{
+            width: 75%;
+            height: 50px;
+        }    
+        &__dropdownTurno{
+            width: 75%;
+            height: 50px;
+        }
+    }
+
+    /* ARMAZONES /////////////////////////////////////////////////////////////////////////// */        
+
+    .armazones{
+        &__tabla{
+            margin:50%;
+            background-color: lighten($color: $escalaGrises, $amount: 60%);
+            margin: 20px 10px;
+            padding: 20px;
+            display: grid; 
+            grid-template-columns: 1fr  2fr   2fr ;
+            grid-template-rows:    25px 150px 150px 150px ;
+        }
+        &__tituloH{
+            align-self: center;
+        }
+        &__tituloV{
+            align-self: center;
+        }
+        &__lista{
+            list-style-image: url(../IMG/li_glasses.png);
+            align-self: center;
+        }
+    }
+
+    /* CONTACTO //////////////////////////////////////////////////////////////////////////// */
+
+    .contacto {
+        background-image: url(../IMG/fondo_contacto.jpg);
+        background-size: cover;
+        padding: 20px;
+        &__label{
+            display: none;
+        }
+        &__input{
+            width: 80%;
+            height: 35px;
+        }
+        &__textarea{
+            width: 80%;
+        }
+        &__dropdownAsunto{
+            width: 50%;
+        }
+        &__checkbox{
+            height: 20px;
+        }
+    }
+}
+
+/* MEDIA QUERIE - Laptops / Escritorio ///////////////////////////////////////////////////////// */
+
+@media only screen and (min-width: 992px){
+
+    /* GENERALES /////////////////////////////////////////////////////////////////////////// */
+
+    img {
+        width: 70%;
+    }
+    .header {
+        padding: 10px;
+        background-color: $headerYFooterOscuro;
+        &__menu{
+            padding: 0% 5%;
+        }
+        &__lista{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        &__item{
+            transition: all 0.75s;
+            width: 500px;
+            a{
+                text-decoration: none;
+                padding: 20px 10px;
+                color: $color2;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    /* HOME //////////////////////////////////////////////////////////////////////////////// */
+
+    .home1 {
+        padding-top: 20px;
+        .carousel-item {
+            h2 {
+                padding-top: 20px;
+            } 
+        }
+    }
+    .home2{
+        &__texto {
+            p{
+                font-size: 15px;
+            }
+            iframe{
+                width: 100%;
+                height: 300px;
+            }
+        }
+        &__img{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+
+    /* OPTIPLUS //////////////////////////////////////////////////////////////////////////// */
+    .oplus2 {
+        color: $colorD;
+        &__texto{
+            padding: 25px 0px;
+            h2{
+                color: $colorD;
+                font-family: gruppo, Arial, Helvetica, sans-serif;
+                font-weight: 800;
+                font-size: 50px;
+            }
+        }
+        &__img{
+            padding: 25px 0px; 
+            img {
+                width: 100%;
+                border: 2px solid brown;
+            }
+        }
+    }
+    .oplus3{
+        padding-bottom: 50px;
+        &__h2{
+            padding: 50px 0px; 
+            font-family: 'Staatliches', cursive;
+        }
+    }
+
+    /* SUCURSALES ////////////////////////////////////////////////////////////////////////// */
+
+    .sucursales {
+        &__item{
+            iframe{
+                display:block;
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+    /* TURNOS ////////////////////////////////////////////////////////////////////////////// */
+
+    .turnos {
+        &__img{
+            width: 50%;
+        }
+        &__botonReservar{
+            transition: all 0.75s;
+            width: 50%;
+            height: 50px;
+        }
+        &__botonReservar:hover{
+            transform: scale(1.1);
+        }
+        &__dropdownTurno{
+            width: 50%;
+            height: 50px;
+        }
+    }
+
+    /* ARMAZONES /////////////////////////////////////////////////////////////////////////// */
+
+    .armazones{
+        &__tabla{
+            margin:50%;
+            background-color: lighten($color: $escalaGrises, $amount: 60%);
+            margin: 20px 10px;
+            padding: 30px;
+            display: grid; 
+            grid-template-columns: 1fr  2fr   2fr ;
+            grid-template-rows:    25px 150px 150px 150px ;
+        }
+        &__tituloH{
+            align-self: center;
+        }
+        &__tituloV{
+            align-self: center;
+        }
+        &__lista{
+            list-style-image: url(../IMG/li_glasses.png);
+            align-self: center;
+        }
+    }
+
+    /* CONTACTO //////////////////////////////////////////////////////////////////////////// */
+
+    .contacto {
+        background-image: url(../IMG/fondo_contacto.jpg);
+        background-size: cover;
+        padding: 20px;
+        border: 1px solid darken($color: $escalaGrises, $amount: 100%);
+        &__label{
+            display: none;
+        }
+        &__input{
+            width: 50%;
+            height: 35px;
+        }
+        &__textarea{
+            width: 50%;
+        }
+        &__checkbox{
+            height: 20px;
+        }
+    }
+}

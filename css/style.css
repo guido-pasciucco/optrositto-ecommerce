@@ -1,0 +1,725 @@
+/* RESUMIR PALETA DE COLORES
+DEJAR SOLO 5 COLORES Y LOGRAR MAS COLORES CON DARKEN O LIGHTEN */
+/* OTROS */
+/* TIERS */
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  text-align: center; }
+
+main {
+  background-image: linear-gradient(to top, #A7DBD8, #E0E4CC, #F38630);
+  padding: 20px; }
+
+a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold; }
+
+h1 {
+  font-size: 40px;
+  padding-bottom: 20px; }
+
+h2 {
+  color: #313131;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold; }
+
+h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
+  font-size: 25px; }
+
+p, h5 {
+  color: black;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif; }
+
+ol li {
+  color: darkred;
+  padding: 5px;
+  list-style-type: decimal;
+  font-family: 'Montserrat', sans-serif; }
+
+ul li {
+  color: #962800;
+  padding: 5px;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif; }
+
+/* GENERALES /////////////////////////////////////////////////////////////////////////////////// */
+.header {
+  padding: 10px;
+  background-color: #555555; }
+  .header__logo {
+    color: black;
+    padding: 0% 42%;
+    margin-bottom: 0px; }
+  .header__h1, .header__p {
+    color: gainsboro;
+    font-family: 'Gruppo', cursive;
+    margin: 0px;
+    padding: 0px;
+    font-size: 50px; }
+  .header__p {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 15px;
+    padding-bottom: 28px; }
+  .header__lista {
+    display: flex;
+    justify-content: space-evenly; }
+  .header__item {
+    transition: all 0.75s; }
+    .header__item a {
+      text-decoration: none;
+      padding: 20px 10px;
+      color: #F38630;
+      text-transform: uppercase; }
+  .header__item:hover {
+    background-color: #F38630;
+    color: black; }
+    .header__item:hover a {
+      color: #323232; }
+
+.footer {
+  background-color: #555555;
+  padding-top: 20px; }
+  .footer__p {
+    font-size: 16px;
+    color: gainsboro;
+    padding-bottom: 20px; }
+  .footer__rrss {
+    width: 60px;
+    height: auto;
+    color: #c3c3c3; }
+
+/* HOME //////////////////////////////////////////////////////////////////////////////////////// */
+.home1 {
+  padding: 20px 0px; }
+  .home1 .carousel-item h2 {
+    padding-top: 20px; }
+
+.home2 {
+  color: #751f00;
+  padding-bottom: 25px; }
+  .home2__texto {
+    padding: 50px 0px;
+    align-self: center; }
+    .home2__texto h2 {
+      color: #751f00; }
+    .home2__texto p {
+      color: #751f00; }
+  .home2__img {
+    padding: 50px 0px; }
+    .home2__img img {
+      width: 90%;
+      border: 2px solid brown; }
+
+.home3 {
+  padding-bottom: 100px; }
+  .home3__h2 {
+    padding-bottom: 100px; }
+  .home3__Estrellas {
+    padding-bottom: 20px; }
+  .home3__item {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #E0E4CC; }
+    .home3__item h3 {
+      text-transform: uppercase;
+      font-size: 20px; }
+    .home3__item p {
+      font-size: 15px;
+      font-style: italic; }
+
+/* OPTIPLUS //////////////////////////////////////////////////////////////////////////////////// */
+.oplus1__banner {
+  background-image: url(../IMG/banner_optiplus.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .oplus1__banner h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 80px;
+    color: #F38630; }
+  .oplus1__banner p {
+    font-family: gruppo, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #F38630;
+    text-transform: uppercase;
+    letter-spacing: 5px; }
+
+.oplus1__descripcion {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .oplus1__descripcion p {
+    font-weight: 800;
+    padding-bottom: 20px;
+    color: #751f00; }
+  .oplus1__descripcion h2 {
+    font-family: 'Staatliches', cursive; }
+
+.oplus2 {
+  color: #751f00;
+  padding-bottom: 25px; }
+  .oplus2__texto {
+    padding: 25px 0px;
+    align-self: center; }
+    .oplus2__texto h2 {
+      color: #751f00;
+      font-family: gruppo, Arial, Helvetica, sans-serif;
+      font-weight: 800; }
+  .oplus2__img {
+    padding: 25px 0px; }
+    .oplus2__img img {
+      width: 100%;
+      border: 2px solid brown; }
+
+.oplus3 {
+  padding-bottom: 50px; }
+  .oplus3__h2 {
+    padding: 50px 0px;
+    font-family: 'Staatliches', cursive; }
+  .oplus3__tierWelcome {
+    border: 1px solid black;
+    text-align: center;
+    background-color: #3e7409;
+    padding: 10%; }
+    .oplus3__tierWelcome h3 {
+      font-family: gruppo, Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 40px;
+      color: white; }
+    .oplus3__tierWelcome p {
+      font-size: 15px;
+      font-style: italic; }
+    .oplus3__tierWelcome ul {
+      padding: 0px;
+      margin: 0px; }
+    .oplus3__tierWelcome li {
+      color: white;
+      text-transform: uppercase; }
+  .oplus3__tierSilver {
+    border: 1px solid black;
+    text-align: center;
+    background-color: #888888;
+    padding: 10%; }
+    .oplus3__tierSilver h3 {
+      font-family: gruppo, Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 40px;
+      color: white; }
+    .oplus3__tierSilver p {
+      font-size: 15px;
+      font-style: italic; }
+    .oplus3__tierSilver ul {
+      padding: 0px;
+      margin: 0px; }
+    .oplus3__tierSilver li {
+      color: white;
+      text-transform: uppercase; }
+  .oplus3__tierGold {
+    border: 1px solid black;
+    text-align: center;
+    background-color: #ffd900;
+    padding: 10%; }
+    .oplus3__tierGold h3 {
+      font-family: gruppo, Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 40px;
+      color: black; }
+    .oplus3__tierGold p {
+      font-size: 15px;
+      font-style: italic; }
+    .oplus3__tierGold ul {
+      padding: 0px;
+      margin: 0px; }
+    .oplus3__tierGold li {
+      color: black;
+      text-transform: uppercase; }
+
+.oplus4__h2 {
+  padding: 25px 0px;
+  font-family: 'Staatliches', cursive; }
+
+.oplus4__p {
+  font-style: italic;
+  padding-bottom: 0px; }
+
+.oplus4__boton {
+  transition: all 0.75s;
+  list-style-type: none;
+  padding: 50px 0px;
+  font-size: 50px; }
+  .oplus4__boton a {
+    text-decoration: none;
+    padding: 20px 10px;
+    color: #F38630;
+    text-transform: uppercase;
+    font-family: 'Staatliches', cursive; }
+
+.oplus4__boton:hover {
+  background-color: #F38630;
+  color: black; }
+  .oplus4__boton:hover a {
+    color: #323232; }
+
+/* SUCURSALES ////////////////////////////////////////////////////////////////////////////////// */
+.sucursales {
+  padding: 0px; }
+  .sucursales__titulo {
+    padding: 50px 0px;
+    background-color: #A7DBD8; }
+    .sucursales__titulo h2 {
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+  .sucursales__row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center; }
+  .sucursales__item {
+    padding: 50px 0px; }
+    .sucursales__item h3 {
+      font-size: 25px;
+      text-transform: uppercase;
+      font-family: gruppo, Arial, Helvetica, sans-serif; }
+    .sucursales__item h4 {
+      font-size: 20px;
+      padding-bottom: 2px; }
+    .sucursales__item p {
+      font-size: 15px;
+      font-style: italic;
+      padding-bottom: 15px; }
+    .sucursales__item iframe {
+      width: 100%; }
+
+/* TURNOS ////////////////////////////////////////////////////////////////////////////////////// */
+.turnos__h2 {
+  font-weight: 800; }
+
+.turnos__h3 {
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.turnos__img {
+  width: 50%; }
+
+.turnos__botonReservar {
+  margin-bottom: 100px; }
+
+/* ARMAZONES /////////////////////////////////////////////////////////////////////////////////// */
+.armazones {
+  padding-top: 50px; }
+  .armazones__tabla {
+    margin: 50%;
+    background-color: white;
+    margin: 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr  2fr   2fr;
+    grid-template-rows: 25px 150px 150px 150px; }
+  .armazones__tituloH {
+    align-self: center; }
+  .armazones__tituloV {
+    align-self: center; }
+  .armazones__lista {
+    list-style-image: url(../IMG/li_glasses.png);
+    align-self: center; }
+  .armazones__videoDeYoutube {
+    border: dashed 1px #751f00; }
+
+/* CONTACTO //////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIE - Extra Small Devices ////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 600px) {
+  /* GENERALES /////////////////////////////////////////////////////////////////////////// */
+  img {
+    width: 95%; }
+  .header__h1, .header__p {
+    font-size: 40px; }
+  .header__p {
+    font-size: 15px; }
+  .header__menu {
+    width: 100%; }
+  .header__lista {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px; }
+  .header__item {
+    width: 100%;
+    padding: 10px 0px; }
+  .footer__p {
+    font-size: 12px; }
+  /* HOME //////////////////////////////////////////////////////////////////////////////// */
+  .home1 {
+    padding-top: 0px; }
+    .home1 .carousel-item h2 {
+      padding-top: 20px; }
+    .home1 .carousel-item p {
+      color: black;
+      padding: 10px;
+      font-size: 15px; }
+  .home2 {
+    padding-top: 0px; }
+    .home2__texto {
+      background-color: #7d7d7d;
+      padding: 10%; }
+      .home2__texto h2 {
+        color: black; }
+      .home2__texto p {
+        color: black;
+        font-size: 15px; }
+    .home2__img {
+      margin: 0px;
+      background-color: #cacaca;
+      padding-bottom: 0px;
+      padding-top: 0px;
+      border: 0px solid black; }
+      .home2__img h2 {
+        padding: 10% 10% 0% 10%;
+        color: black; }
+      .home2__img p {
+        padding: 10% 10% 0% 10%;
+        color: black;
+        font-size: 15px; }
+      .home2__img img {
+        border: none; }
+  .home3__h2 {
+    padding: 75px 0px; }
+  /* OPTIPLUS //////////////////////////////////////////////////////////////////////////// */
+  main {
+    padding: 0px; }
+  .oplus1__banner {
+    background-size: cover; }
+  .oplus1__descripcion {
+    height: auto; }
+    .oplus1__descripcion p {
+      padding: 10%; }
+    .oplus1__descripcion h2 {
+      padding: 5%; }
+  .oplus2__h2 {
+    padding: 25px 0px; }
+  .oplus2__texto {
+    padding: 25px 10px;
+    order: 1; }
+    .oplus2__texto h2 {
+      color: #751f00;
+      font-size: 30px;
+      padding: 0% 10%; }
+  .oplus2__img {
+    order: 2;
+    padding-top: 0px;
+    padding: 5px 10px; }
+  .oplus3 {
+    padding-bottom: 50px; }
+    .oplus3__h2 {
+      padding-top: 50px 0px 25px 0px; }
+  .oplus4__h2 {
+    padding: 0px; }
+  .oplus4__p {
+    padding-bottom: 0px; }
+  /* SUCURSALES ////////////////////////////////////////////////////////////////////////// */
+  .sucursales {
+    padding-bottom: 50px; }
+    .sucursales__item {
+      padding: 0px; }
+      .sucursales__item h3 {
+        padding-top: 50px; }
+      .sucursales__item p {
+        padding-bottom: 25px; }
+      .sucursales__item iframe {
+        display: none; }
+  /* TURNOS ////////////////////////////////////////////////////////////////////////// */
+  .turnos__img {
+    width: 100%; }
+  .turnos__botonReservar {
+    width: 100%;
+    height: 50px; }
+  .turnos__dropdownTurno {
+    width: 100%;
+    height: 50px; }
+  /* ARMAZONES ////////////////////////////////////////////////////////////////////////// */
+  .armazones__tabla {
+    background-color: white;
+    padding: 10px;
+    margin: 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr  2fr   2fr;
+    grid-template-rows: 25px 200px 200px 200px;
+    justify-content: space-evenly; }
+  .armazones__tituloH {
+    align-self: center;
+    font-size: 12px; }
+  .armazones__tituloV {
+    align-self: center;
+    font-size: 12px; }
+  .armazones__lista {
+    list-style-image: none;
+    font-size: 12px;
+    align-self: center;
+    padding-left: 0px;
+    font-weight: 800; }
+  .armazones__videoDeYoutube iframe {
+    width: 100%; }
+  /* CONTACTO ////////////////////////////////////////////////////////////////////////// */
+  .contacto {
+    background-image: url(../IMG/fondo_contacto.jpg);
+    background-size: cover;
+    padding: 20px;
+    line-height: 25px; }
+    .contacto__h2 {
+      padding-bottom: 10px; }
+    .contacto__input {
+      width: 100%;
+      height: 35px; }
+    .contacto__textarea {
+      width: 100%;
+      height: 100px; }
+    .contacto__dropdownAsunto {
+      width: 100%;
+      height: 35px; }
+    .contacto__checkbox {
+      height: 20px; } }
+
+/* MEDIA QUERIE - Tablets ////////////////////////////////////////////////////////////////////// */
+@media only screen and (min-width: 600px) {
+  /* GENERALES /////////////////////////////////////////////////////////////////////////// */
+  img {
+    width: 75%; }
+  .header__menu {
+    width: 100%; }
+  .header__lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    padding: 0% 15%; }
+  .header__item {
+    width: 100%;
+    padding: 10px 0px; }
+  /* HOME //////////////////////////////////////////////////////////////////////////////// */
+  .home1 {
+    background-color: #cacaca;
+    padding-top: 20px; }
+    .home1 .carousel-item h2 {
+      padding-top: 20px; }
+  .home2 {
+    padding-top: 25px; }
+    .home2__texto {
+      transition: all 1s; }
+      .home2__texto p {
+        font-size: 15px; }
+      .home2__texto iframe {
+        width: 100%;
+        height: 300px; }
+    .home2__img {
+      transition: all 1s; }
+      .home2__img p {
+        font-size: 12px; }
+      .home2__img iframe {
+        width: 100%;
+        height: 300px; }
+  /* OPTIPLUS //////////////////////////////////////////////////////////////////////////// */
+  .oplus1__banner {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .oplus1__descripcion {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .oplus1__descripcion p {
+      padding-bottom: 20px; }
+  .oplus2 {
+    color: #751f00; }
+    .oplus2__texto {
+      padding: 25px 0px;
+      font-size: 50%; }
+    .oplus2__img {
+      padding: 25px 0px; }
+      .oplus2__img img {
+        width: 100%;
+        border: 2px solid brown; }
+  .oplus3 {
+    padding-bottom: 25px; }
+    .oplus3__h2 {
+      padding: 25px 0px; }
+  .oplus4__h2 {
+    padding: 25px 0px; }
+  .oplus4__p {
+    padding-bottom: 0px; }
+  .oplus4__boton {
+    padding: 50px 0px;
+    font-size: 50px; }
+    .oplus4__boton a {
+      padding: 20px 10px; }
+  /* SUCURSALES ////////////////////////////////////////////////////////////////////////// */
+  .sucursales__item {
+    padding: 0px; }
+    .sucursales__item h3 {
+      padding: 50px 0px 25px 0px; }
+    .sucursales__item p {
+      padding-bottom: 25px; }
+    .sucursales__item iframe {
+      display: none;
+      height: 0px;
+      padding: 0px 0px; }
+  /* TURNOS ////////////////////////////////////////////////////////////////////////////// */
+  .turnos__img {
+    width: 65%; }
+  .turnos__botonReservar {
+    width: 75%;
+    height: 50px; }
+  .turnos__dropdownTurno {
+    width: 75%;
+    height: 50px; }
+  /* ARMAZONES /////////////////////////////////////////////////////////////////////////// */
+  .armazones__tabla {
+    margin: 50%;
+    background-color: white;
+    margin: 20px 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr  2fr   2fr;
+    grid-template-rows: 25px 150px 150px 150px; }
+  .armazones__tituloH {
+    align-self: center; }
+  .armazones__tituloV {
+    align-self: center; }
+  .armazones__lista {
+    list-style-image: url(../IMG/li_glasses.png);
+    align-self: center; }
+  /* CONTACTO //////////////////////////////////////////////////////////////////////////// */
+  .contacto {
+    background-image: url(../IMG/fondo_contacto.jpg);
+    background-size: cover;
+    padding: 20px; }
+    .contacto__label {
+      display: none; }
+    .contacto__input {
+      width: 80%;
+      height: 35px; }
+    .contacto__textarea {
+      width: 80%; }
+    .contacto__dropdownAsunto {
+      width: 50%; }
+    .contacto__checkbox {
+      height: 20px; } }
+
+/* MEDIA QUERIE - Laptops / Escritorio ///////////////////////////////////////////////////////// */
+@media only screen and (min-width: 992px) {
+  /* GENERALES /////////////////////////////////////////////////////////////////////////// */
+  img {
+    width: 70%; }
+  .header {
+    padding: 10px;
+    background-color: #555555; }
+    .header__menu {
+      padding: 0% 5%; }
+    .header__lista {
+      display: flex;
+      justify-content: space-evenly; }
+    .header__item {
+      transition: all 0.75s;
+      width: 500px; }
+      .header__item a {
+        text-decoration: none;
+        padding: 20px 10px;
+        color: #F38630;
+        text-transform: uppercase; }
+  /* HOME //////////////////////////////////////////////////////////////////////////////// */
+  .home1 {
+    padding-top: 20px; }
+    .home1 .carousel-item h2 {
+      padding-top: 20px; }
+  .home2__texto p {
+    font-size: 15px; }
+  .home2__texto iframe {
+    width: 100%;
+    height: 300px; }
+  .home2__img p {
+    font-size: 15px; }
+  /* OPTIPLUS //////////////////////////////////////////////////////////////////////////// */
+  .oplus2 {
+    color: #751f00; }
+    .oplus2__texto {
+      padding: 25px 0px; }
+      .oplus2__texto h2 {
+        color: #751f00;
+        font-family: gruppo, Arial, Helvetica, sans-serif;
+        font-weight: 800;
+        font-size: 50px; }
+    .oplus2__img {
+      padding: 25px 0px; }
+      .oplus2__img img {
+        width: 100%;
+        border: 2px solid brown; }
+  .oplus3 {
+    padding-bottom: 50px; }
+    .oplus3__h2 {
+      padding: 50px 0px;
+      font-family: 'Staatliches', cursive; }
+  /* SUCURSALES ////////////////////////////////////////////////////////////////////////// */
+  .sucursales__item iframe {
+    display: block;
+    width: 100%;
+    height: 500px; }
+  /* TURNOS ////////////////////////////////////////////////////////////////////////////// */
+  .turnos__img {
+    width: 50%; }
+  .turnos__botonReservar {
+    transition: all 0.75s;
+    width: 50%;
+    height: 50px; }
+  .turnos__botonReservar:hover {
+    transform: scale(1.1); }
+  .turnos__dropdownTurno {
+    width: 50%;
+    height: 50px; }
+  /* ARMAZONES /////////////////////////////////////////////////////////////////////////// */
+  .armazones__tabla {
+    margin: 50%;
+    background-color: white;
+    margin: 20px 10px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr  2fr   2fr;
+    grid-template-rows: 25px 150px 150px 150px; }
+  .armazones__tituloH {
+    align-self: center; }
+  .armazones__tituloV {
+    align-self: center; }
+  .armazones__lista {
+    list-style-image: url(../IMG/li_glasses.png);
+    align-self: center; }
+  /* CONTACTO //////////////////////////////////////////////////////////////////////////// */
+  .contacto {
+    background-image: url(../IMG/fondo_contacto.jpg);
+    background-size: cover;
+    padding: 20px;
+    border: 1px solid black; }
+    .contacto__label {
+      display: none; }
+    .contacto__input {
+      width: 50%;
+      height: 35px; }
+    .contacto__textarea {
+      width: 50%; }
+    .contacto__checkbox {
+      height: 20px; } }
